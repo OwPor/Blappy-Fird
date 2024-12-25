@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://73rp0mxkgiat"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_opd2c"]
+[ext_resource type="Texture2D" uid="uid://dw45noclk3pwk" path="res://assets/images/bird.png" id="2_oc5bc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pp0pl"]
+radius = 25.0
+height = 74.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_opd2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.121875, 0.121875)
+texture = ExtResource("2_oc5bc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_pp0pl")
